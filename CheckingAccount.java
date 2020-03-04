@@ -1,19 +1,17 @@
-package hw3;
 
 import java.math.BigDecimal;
 
 /**
  * This class represents a checking account
- * 
- * @author brown8jt - Josh Brown
- * @since 3/14/2018
+ *
+ * @author Josh Brown
  *
  */
 public class CheckingAccount extends Account {
 
 	/**
 	 * Constructor that calls to the abstract super class Account
-	 * 
+	 *
 	 * @param pAccountNumber
 	 *            - Integer representing unique account number
 	 * @param pBalance
@@ -28,7 +26,7 @@ public class CheckingAccount extends Account {
 	/**
 	 * This method will withdraw a given amount from the account. The account can go
 	 * negative; if so, the system will send message to teller.
-	 * 
+	 *
 	 * @param pAmount
 	 *            - Amount to be withdrawn from account balance
 	 */
@@ -45,8 +43,6 @@ public class CheckingAccount extends Account {
 
 			// set balance to current balance minus amount withdrawn
 			this.setBalance(this.getBalance().subtract(pAmount));
-
-			// withdrawal was successful
 			success = true;
 
 		}

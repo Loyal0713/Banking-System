@@ -1,4 +1,3 @@
-package hw3;
 
 import java.math.BigDecimal;
 
@@ -11,16 +10,15 @@ class NotEnoughFundsException extends Exception {
 
 /**
  * This class represents a savings account
- * 
- * @author brown8jt - Josh Brown
- * @since 3/14/2018
+ *
+ * @author Josh Brown
  *
  */
 public class SavingsAccount extends Account {
 
 	/**
 	 * Constructor that calls to abstract super class Account
-	 * 
+	 *
 	 * @param pAccountNumber
 	 *            - Integer representing the unique account number
 	 * @param pBalance
@@ -36,11 +34,11 @@ public class SavingsAccount extends Account {
 	 * This method will try to withdraw a given amount from the account balance if
 	 * there are available funds. If there is not enough funds in the account, the
 	 * current balance will be shown and a NotEnoughFundsException thrown.
-	 * 
+	 *
 	 * @param pAmount
 	 *            - Amount to be withdrawn if possible
 	 * @return boolean - true if withdrawal was successful
-	 * 
+	 *
 	 */
 	public boolean withdraw(BigDecimal pAmount) throws NotEnoughFundsException {
 
@@ -60,7 +58,7 @@ public class SavingsAccount extends Account {
 
 			// subtract amount from balance
 			this.setBalance(this.getBalance().subtract(pAmount));
-			
+
 			return true;
 
 		}

@@ -1,10 +1,8 @@
-package hw3;
 
 /**
  * The Person class represents a person who will be using the banking system.
- * 
- * @author brown8jt - Josh Brown
- * @since 2/28/2019
+ *
+ * @author Josh Brown
  *
  */
 
@@ -15,7 +13,7 @@ public class Person {
 
 	/**
 	 * Public constructor for person class
-	 * 
+	 *
 	 * @param pFName
 	 *            - First name of person
 	 * @param pLName
@@ -34,7 +32,7 @@ public class Person {
 
 	/**
 	 * Returns the first name of the person
-	 * 
+	 *
 	 * @return String representing the first name
 	 */
 	public String getfName() {
@@ -43,7 +41,7 @@ public class Person {
 
 	/**
 	 * Returns the last name of the person
-	 * 
+	 *
 	 * @return - String representing the last name
 	 */
 	public String getlName() {
@@ -52,7 +50,7 @@ public class Person {
 
 	/**
 	 * Returns the license number of the person
-	 * 
+	 *
 	 * @return - int representing the license number
 	 */
 	public int getLicenseNum() {
@@ -61,7 +59,7 @@ public class Person {
 
 	/**
 	 * Sets the person's first name with the given first name
-	 * 
+	 *
 	 * @param fName
 	 *            - String representing the new first name
 	 */
@@ -71,7 +69,7 @@ public class Person {
 
 	/**
 	 * Sets the person's last name with the given last name
-	 * 
+	 *
 	 * @param lName
 	 *            - String representing the new last name
 	 */
@@ -81,7 +79,7 @@ public class Person {
 
 	/**
 	 * Sets the person's license number with the given number
-	 * 
+	 *
 	 * @param licenseNum
 	 *            - int representing the new license number
 	 */

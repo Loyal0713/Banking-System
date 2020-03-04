@@ -1,4 +1,3 @@
-package hw3;
 
 import java.math.BigDecimal;
 
@@ -40,8 +39,8 @@ class InvalidAccountTypeException extends Exception {
 /**
  * This class represents a teller which will interact with both a Person class
  * and a BankingSystem class.
- * 
- * @author brown8jt - Josh Brown
+ *
+ * @author Josh Brown
  *
  */
 public class Teller {
@@ -51,7 +50,7 @@ public class Teller {
 
 	/**
 	 * Public constructor for teller class
-	 * 
+	 *
 	 * @param pFName
 	 *            - First name of person interacting with teller
 	 * @param pLName
@@ -73,7 +72,7 @@ public class Teller {
 	 * successful message. Else, it will print an unsuccessful message. The method
 	 * will also throw an AccountDoesNotExistException if the given account does not
 	 * exist in the banking system.
-	 * 
+	 *
 	 * @param pCustomer
 	 *            - Person representing the customer
 	 * @param pAccountType
@@ -81,7 +80,7 @@ public class Teller {
 	 * @param amount
 	 *            - BigDecimal amount to withdraw from account
 	 * @return - boolean true if transaction was successful, false if unsuccessful
-	 * 
+	 *
 	 * @throws AccountDoesNotExistException
 	 *             - Person does not have given account
 	 * @throws CustomerDoesNotExistException
@@ -101,9 +100,7 @@ public class Teller {
 
 		} else {
 
-			// customer exists
-
-			// verify that account exists
+			// customer exists; verify that account exists
 			if (this.bankSys.verifyAccountExists(pCustomer, pAccount) == false) {
 
 				// account does not exist
@@ -116,7 +113,7 @@ public class Teller {
 
 			// print if withdrawal was successful
 			if (success) {
-				
+
 				// account has the available funds
 				System.out.println("--------------------------------------------");
 				System.out.println("Transaction successful!");
@@ -125,7 +122,7 @@ public class Teller {
 				System.out.println("--------------------------------------------\n");
 
 			} else {
-				
+
 				// account does not have the available funds
 				System.out.println("--------------------------------------------");
 				System.out.println("Error trying to with draw!");
@@ -140,7 +137,7 @@ public class Teller {
 	 * This method will try to deposit a given amount to a given person's given
 	 * account. The method will throw an AccountDoesNotExistException if the given
 	 * account does not exist in the banking system.
-	 * 
+	 *
 	 * @param pCustomer
 	 *            - Customer for the transaction
 	 * @param pAccount
@@ -151,7 +148,7 @@ public class Teller {
 	 *             - Person does not have given account
 	 * @throws CustomerDoesNotExistException
 	 *             - Person does not exist in banking system
-	 * 
+	 *
 	 */
 	public void deposit(Person pCustomer, Account pAccount, BigDecimal amount)
 			throws AccountDoesNotExistException, CustomerDoesNotExistException {
@@ -164,9 +161,7 @@ public class Teller {
 
 		} else {
 
-			// customer exists
-
-			// verify that account exists
+			// customer exists; verify that account exists
 			if (this.bankSys.verifyAccountExists(pCustomer, pAccount) == false) {
 
 				// account does not exist
@@ -193,10 +188,10 @@ public class Teller {
 	 * This method will try to add a new customer to the banking system. It will
 	 * throw a AccountAlreadyExistsException if the given person already is in the
 	 * banking system.
-	 * 
+	 *
 	 * @param pCustomer
 	 *            - Person to be added to the banking system
-	 * 
+	 *
 	 * @throws CustomerAlreadyExistsException
 	 *             - Person already exists in banking system
 	 */
@@ -226,7 +221,7 @@ public class Teller {
 	 * This method will try to remove a customer from the banking system. It will
 	 * throw an AccountDoesNotExistException if the given person is not in the
 	 * banking system.
-	 * 
+	 *
 	 * @param pCustomer
 	 *            - Person to be removed from the banking system
 	 * @throws CustomerDoesNotExistException
@@ -259,7 +254,7 @@ public class Teller {
 	 * account type is determined by: 1 = Checking, 2 = Savings. It will throw an
 	 * AccountDoesNotExistException if the given person is not in the banking
 	 * system.
-	 * 
+	 *
 	 * @param pCustomer
 	 *            - Person to add the account to
 	 * @param accountType
@@ -282,19 +277,19 @@ public class Teller {
 
 		} else {
 
-			// person is in banking system
-
-			// create new account
+			// person is in banking system; create new account
 			Account newAccount;
 
 			// create account with specific type
 			switch (accountType) {
 
 			case 1:
+				// create checking account
 				newAccount = new CheckingAccount(accountNumber, new BigDecimal(0.00));
 				break;
 
 			case 2:
+				// create savings account
 				newAccount = new SavingsAccount(accountNumber, new BigDecimal(0.00));
 				break;
 
@@ -328,7 +323,7 @@ public class Teller {
 
 	/**
 	 * A different method to open account: uses an already created Account object to add to database.
-	 * 
+	 *
 	 * @param pCustomer - Customer to add account to
 	 * @param pAccount - Account to be added for customer
 	 * @throws CustomerDoesNotExistException - Person does not exist in banking system

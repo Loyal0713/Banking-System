@@ -1,6 +1,12 @@
-package hw3;
 
 import java.math.BigDecimal;
+
+/**
+ * Main demonstrates the working classes
+ *
+ * @author Josh Brown
+ *
+ */
 
 public class Main {
 
@@ -22,35 +28,35 @@ public class Main {
 		// random numbersfor accounts
 		int checkingAccountNum = 46567163;
 		int savingsAccountNum = 654684155;
-		
+
 		// balances for accounts
 		BigDecimal checkAccBal = new BigDecimal(100.00);
 		BigDecimal savingAccBal = new BigDecimal(50.00);
-		
+
 		//create accounts
 		Account checkingAcc = new CheckingAccount(checkingAccountNum, checkAccBal);
 		Account savingAcc = new SavingsAccount(savingsAccountNum, savingAccBal);
-		
+
 		//open accounts
 		t1.openAccount(p1, checkingAcc);
 		t1.openAccount(p1, savingAcc);
-		
+
 		//reopen accounts - works
 		//t1.openAccount(p1, checkingAcc);
 		//t1.openAccount(p1, savingAcc);
-		
+
 		//withdraw 50 from checking - works
 		t1.withdraw(p1, checkingAcc, new BigDecimal(50.00));
-		
+
 		//withdraw 75 from checking - works
 		t1.withdraw(p1, checkingAcc, new BigDecimal(75.00));
-		
+
 		//deposit 50 to checking - works
 		t1.deposit(p1, checkingAcc, new BigDecimal(50.00));
-		
+
 		//withdraw 50 from savings - works
 		t1.withdraw(p1, savingAcc, new BigDecimal(50.00));
-		
+
 		//withdraw 50 from savings again - works
 		t1.withdraw(p1, savingAcc, new BigDecimal(50.00));
 

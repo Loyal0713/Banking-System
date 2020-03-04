@@ -1,12 +1,10 @@
-package hw3;
 
 import java.math.BigDecimal;
 
 /**
  * Abstract class that represents a bank account
- * 
- * @author brown8jt - Josh Brown
- * @since 3/14/2018
+ *
+ * @author Josh Browns
  *
  */
 public abstract class Account {
@@ -19,7 +17,7 @@ public abstract class Account {
 
 	/**
 	 * Constructor for account; sets account number and balance with given values
-	 * 
+	 *
 	 * @param pAccountNumber
 	 *            - Integer representing unique account number
 	 * @param pBalance
@@ -32,7 +30,7 @@ public abstract class Account {
 
 	/**
 	 * Method used to withdraw money from account
-	 * 
+	 *
 	 * @param pAmount
 	 *            - amount to be withdrawn
 	 * @return boolean - true if withdrawal was successful, false if not
@@ -43,7 +41,7 @@ public abstract class Account {
 
 	/**
 	 * Returns unique account number
-	 * 
+	 *
 	 * @return Unique account number
 	 */
 	public int getAccountNumber() {
@@ -52,7 +50,7 @@ public abstract class Account {
 
 	/**
 	 * Returns account balance
-	 * 
+	 *
 	 * @return BigDecimal representing the account balance
 	 */
 	public BigDecimal getBalance() {
